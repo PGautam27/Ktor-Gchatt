@@ -3,7 +3,7 @@ package com.example.plugins
 import io.ktor.application.*
 import io.ktor.http.cio.websocket.*
 import io.ktor.websocket.*
-import java.time.Duration
+import java.time.*
 
 fun Application.configureSockets() {
     install(WebSockets) {
