@@ -1,6 +1,6 @@
 package com.example.room
 
-import io.ktor.websocket.*
+import io.ktor.http.cio.websocket.*
 
 data class Member(
     val username: String,
