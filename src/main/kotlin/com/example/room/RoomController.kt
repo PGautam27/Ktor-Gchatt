@@ -40,8 +40,17 @@ class RoomController(
 
             val parsedMessage = Json.encodeToString(messageEntity)
             member.socket.send(Frame.Text(parsedMessage))
+        }
+    }
 
+    suspend fun getAllMessages(): List<Message>{
+        return messageDataSource.getAllMessages()
+    }
 
+    suspend fun tryDisconnect(username: String){
+        member[username]?.socket?.close()
+        if (member.containsKey(username)){
+            member.remove(username)
         }
     }
 }
