@@ -2,6 +2,7 @@ package com.example.room
 
 import com.example.data.MessageDataSource
 import com.example.data.model.Message
+import io.ktor.http.cio.websocket.*
 import io.ktor.websocket.*
 import kotlinx.serialization.encodeToString
 import kotlinx.serialization.json.Json
